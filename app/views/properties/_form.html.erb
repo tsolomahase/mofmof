@@ -1,9 +1,7 @@
 <div class="d-flex flex-column align-items-center mt-3">
   <div class="col-xl-7 col-lg-8 col-md-10 col-sm-11 post-card">
-    <div class="card">
-      <div class="card-header">
-        Create New Property
-      </div>
+    <div class="card"><center>
+      <div class="card-header"> Create New Property </div>
       <div class="card-body">
 
 <%= form_for(property) do |f| %>
@@ -47,22 +45,24 @@
   </div>
 
   <%= f.fields_for :stations do |ff| %>
-    <hr>
-    <strong>Name of rail way</strong><br>
-    <div class="field">
-      <%= ff.label :rail_way_line, "Name of rail way line" %>
-      <%= ff.text_field :rail_way_line %>
-    </div>
+    <table>
+      <hr>
+      <strong><center> Name of rail way</strong><br>
+      <div class="field">
+        <%= ff.label :rail_way_line, "Name of rail way line" %>
+        <%= ff.text_field :rail_way_line %>
+      </div>
 
-    <div class="field">
-      <%= ff.label :station_name %>
-      <%= ff.text_field :station_name %>
-    </div>
+      <div class="field">
+        <%= ff.label :station_name %>
+        <%= ff.text_field :station_name %>
+      </div>
 
-    <div class="field">
-      <%= ff.label :minutes_walk, "How many minutes walk" %>
-      <%= ff.number_field :minutes_walk %>min/mins
-    </div>
+      <div class="field">
+        <%= ff.label :minutes_walk, "How many minutes walk" %>
+        <%= ff.number_field :minutes_walk %>min/mins
+      </div>
+    </table>
   <% end %>
 
   <div class="actions">
@@ -76,5 +76,4 @@
     </div>
       </div>
         </div>
-        <%= link_to 'Back', properties_path ,  class: "btn btn-primary" %>
           </div>
